@@ -1,0 +1,5 @@
+# A Digital Mera: Population Changes in the Rio Grande Glaze-Paint Area 
+
+## ABSTRACT: 
+
+A digitized temporal mapping of H.P. Mera’s 1940 classic, *Population Changes in the Rio Grande Glaze-Paint Area*, which charts the population changes in the wider Rio Grande region between 1350 CE and 1700 CE, making this data more interactively accessible.  Mera associated sites from eight cultural areas to six pottery phases (Glaze A – Glaze F) over a sequence of five temporal periods and mapped those sites per period.  These maps form the analog basis for the digitization process, allowing the production of an interactive web map that demonstrates the changes in regional indigenous populations during the Coalition and Classic phases of the Rio Grande chronology. Specific site data from New Mexico’s archaeological site database has been added to supplement and update Mera’s descriptions in order to provide greater comprehension and insight. Where possible, flow map layers demonstrate the direction of population flow in the total region and within cultural subregions.   
