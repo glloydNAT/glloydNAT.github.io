@@ -15,11 +15,21 @@
         function onLocalSHPLoadError() {
             document.write('scr' + 'ipt src="//unpkg.com/shpjs@latest/dist/shp.min.js"></scr' + 'ipt>');
         }
+
+        function onLocalBootstrapLoadError(){
+            document.write('<scr'+'ipt src"https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></scr'+'ipt');
+        }
+
+        function onLocalBootstrapCSSLoadError(){
+            document.write('<lin'+'l rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"/>');
+        }
     </script>
     <script src="JS_CSS_downloaded_libraries/leaflet.js" onerror="onLocalLeafletLoadError()"></script>
     <link rel="stylesheet" href="JS_CSS_downloaded_libraries/leaflet.css" onerror="onLocalLeafletCSSLoadError()" />
     <script src="JS_CSS_downloaded_libraries/shp.min.js" onerror="onLocalSHPLoadError()"></script>
-    
+    <script src="JS_CSS_downloaded_libraries/bootstrap.bundle.min.js" onerror="onLocalBootstrapLoadError()"></script>
+    <link rel="stylesheet" href="JS_CSS_downloaded_libraries/bootstrap.min.css" onerror="onLocalBootstrapCSSLoadError()"/>
+
 
 </head>
 
