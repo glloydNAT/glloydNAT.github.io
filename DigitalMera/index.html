@@ -26,7 +26,7 @@
         async function getGeojson(zipfile){
 
         	//for the shapefiles in the files folder called pandr.shp
-	        const gj = await shp("regionShapes/"+zipfile);
+	        const gj = await shp("data/regionShapes/"+zipfile);
            // console.log(geojson['features'][0]);
            L.geoJSON(gj['features'][0]).addTo(mymap);
 
