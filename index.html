@@ -1,24 +1,96 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
     <title>glloydNAT Personal Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="JS_CSS_downloaded_libraries/bootstrap.min.css" />
+    <script src="JS_CSS_downloaded_libraries/jquery-3.7.1.min.js"></script>
+
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>Introductions</h1>
-    <p>Name: Garrett Lloyd</p>
-    <p>I am currently a fourth year undergraduate student at the University of New Mexico, majoring in Anthropology (concetnration in Archaeology) and minoring in Geographic Information Science (GIS).</p>
-    <p>Below, you will find some of my coursework for a course I have taken from Dr. Liping Yang called Interactive Web Mapping (GEOG 485L).  There are two basic examples of work performed in our first lab class and then our final project's public code (coming soon).</p>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Portfolio</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Lab Work</a></li>
+                    <li><a href="#">Digital Mera</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container text-left">
+            <h1>Garrett Lloyd</h1>
+            <h4>Introductions</h4>
+            <p>I am currently a fourth year undergraduate student at the University of New Mexico, majoring in
+                Anthropology (concetnration in Archaeology) and minoring in Geographic Information Science (GIS).</p>
+            <p>Below, you will find some of my coursework for a course I have taken from Dr. Liping Yang called
+                Interactive Web Mapping (GEOG 485L). There are two basic examples of work performed in our first lab
+                class and then our final project's public code (coming soon).</p>
+
+            <h2>GEOG 485L Lab Exercises</h2>
+            <ul>
+                <li><a href="/Garrett_Lloyd_Lab01/GarrettLloyd_MyFirstMap_Task1.html" target="_blank">Lab 01 - Task
+                        01</a></li>
+                <li><a href="/Garrett_Lloyd_Lab01/GarrettLloyd_MyFirstMap_Task2.html" target="_blank">Lab 01 - Task
+                        02</a></li>
+            </ul>
+
+            <br />
+
+            <h2>Final Project</h2>
+            <p>Coming soon...</p>
+            <a href="DigitalMera/index.html" target="_blank"><i>A Digital Mera: Population Changes in the Rio Grande
+                    Glaze-paint
+                    Area</i></a>
 
 
+        </div>
+    </div>
 
-    <h2>GEOG 485L Lab Exercises</h2>
-    <ul>
-        <li><a href="/Garrett_Lloyd_Lab01/GarrettLloyd_MyFirstMap_Task1.html" target="_blank">Lab 01 - Task 01</a></li>
-        <li><a href="/Garrett_Lloyd_Lab01/GarrettLloyd_MyFirstMap_Task2.html" target="_blank">Lab 01 - Task 02</a></li>
-    </ul>
-    
-    <br />
-    
-    <h2>Final Project</h2>
-    <p>Coming soon...</p>
-    <a href="DigitalMera/index.html" target="_blank"><i>A Digital Mera: Population Changes in the Rio Grande Glaze-paint Area</i></a>
+
+    <br><br>
+
+    <footer class="container-fluid text-center">
+        <p>Footer Footer Footer</p>
+    </footer>
+
+
+    <script src="JS_CSS_downloaded_libraries/bootstrap.bundle.min.js"></script>
+
+
 </body>
+
+</html>
