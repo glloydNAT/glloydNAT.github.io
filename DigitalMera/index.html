@@ -44,26 +44,34 @@
     <script src="JS_CSS_downloaded_libraries/leaflet-timeline-slider.min.js"></script>
     <script src="JS_CSS_downloaded_libraries/leaflet.fullscreen.min.js" onerror="onLocalLeafletFullscreenLoadError()"></script>
     <link rel="stylesheet" href="JS_CSS_downloaded_libraries/leaflet.fullscreen.css" onerror="onLocalLeafletFullscreenCSSLoadError()">
+    <script src="JS_CSS_downloaded_libraries/leaflet-bootstrap-dropdowns.min.js"></script>
+    <script src="JS_CSS_downloaded_libraries/leaflet.legend.js"></script>
+    <link rel="stylesheet" href="JS_CSS_downloaded_libraries/leaflet.legend.css" />
     
-
+    <!-- our css file-->
+    <link rel="stylesheet" href="myCss_styleFiles/DigitalMera.css" /> 
 
 </head>
 
-<body style="background-color:black;">
-
+<body>
     <!-- Our Splashscreen modal-->
     <div class="modal" tabindex="-1" id="splashScreen">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Welcome to 'A Digital Mera'</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6>Created by: <a href="https://glloydnat.github.io/" target="_blank">Garrett Lloyd</a> <a href="mailto:glloyd1@unm.edu" target="_blank"> (glloyd1@unm.edu)</a>, <a href="https://gavinschorrarchaeology.github.io/" target="_blank">Gavin Schorr</a><a href="mailto:gschorr2468@unm.edu" target="_blank"> (gschorr2468@unm.edu)</a>, and <a href="https://bennolee.github.io/" target="_blank">Benno Lee</a><a href="mailto:bennolee1@unm.edu" target="_blank"> (bennolee1@unm.edu)</a></h6>
+                    <h6>Created by:</h6> 
+                    <ul>
+                        <li><a href="https://glloydnat.github.io/" target="_blank">Garrett Lloyd</a> (glloyd1@unm.edu)</li>
+                        <li><a href="https://gavinschorrarchaeology.github.io/" target="_blank">Gavin Schorr</a> (gschorr2468@unm.edu)</li>
+                        <li><a href="https://bennolee.github.io/" target="_blank">Benno Lee</a> (bennolee1@unm.edu)</li>
+                    </ul>
                     <h6>Project advisor:  <a href="https://www.lipingyang.org/" target="_blank">Dr. Liping Yang</a></h6>
                     <hr>
-                    <h6 style="text-align: center;">About</h6>
+                    <h5 class="modalHCenter">About</h5>
                     <p> This interactive map brings H.P. Mera's 1940 study, <i>Population Changes in the Rio Grande
                             Glaze-paint Area</i>, into the digital age.</p>
                     <p>Using ceramic typologies to track settlement shifts over time, Mera mapped 205 archaeological
@@ -71,7 +79,7 @@
                     <p>Our project lets you explore these patterns across five time periods and view some site details
                         --all while preserving the integrity of sensitive site locations.</p>
                     <br />
-                    <h6 style="text-align: center;">References</h6>
+                    <h5 class="modalHCenter">References</h5>
                     <p>Bandelier, Adolph (1910). <cite>Documentary History of the Rio Grande Pueblos of New Mexico</cite>. Archaeological Institute of America.</p>
                     <p>Jennings, J. D., Reed, E. K., Griffin, J. B., Kelley, J. C., Meighan, C. W., Stubbs, S., Wheat, J. B., & Taylor, D. C. (1956). <cite>The American Southwest: A Problem in Cultural Isolation.</cite> Memoirs of the Society for American Archaeology, 11, 59-127.</p>
                     <p>Mera, H.P. (1940). <cite>Population Changes in the Rio Grande Glaze-Paint Area.</cite>  Laboratory of Anthropology, University of New Mexico.</p>
@@ -89,7 +97,7 @@
     </div>
 
     <!-- Our map container-->
-    <div class="mx-auto" id="mapId" style="height: 650px;width: 1200px;"></div>
+    <div class="mx-auto" id="mapId"></div>
     
     
     <script>
