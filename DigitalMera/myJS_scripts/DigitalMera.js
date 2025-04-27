@@ -206,7 +206,7 @@ var legendItems = [
     {
         label: "Site",
         type: "image",
-        url: "/DigitalMera/myCss_styleFiles/DM_icon.png",
+        url: "/DigitalMera/myCss_styleFiles/DM_siteIcon.png",
     },
     {
         label: "Piro",
