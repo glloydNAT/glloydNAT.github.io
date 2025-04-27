@@ -34,6 +34,14 @@ const sites = [
     ["diagnosticSites-all.zip"]
 ]
 
+// default basemap
+var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
+	minZoom: 1,
+	maxZoom: 16,
+	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	ext: 'jpg'
+});
+
 //define the map
 var mymap = L.map('mapId',{
     
@@ -41,6 +49,7 @@ var mymap = L.map('mapId',{
         pseudoFullscreen: true, // if true, fullscreen to page width and height
         position: "topright"
     },
+    layers: Stadia_StamenWatercolor,
     zoomControl: false
 
 
@@ -269,12 +278,29 @@ L.control.Legend({
 // TODO: basemap changer
 
 // define our default basemap
-var osm = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', { 
-    attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+
+
+
+
+var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	maxZoom: 19,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
 });
+
+var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+});
+
+var basemaps = {
+    "<span style='color: black'>Stadia Watercolor</span>": Stadia_StamenWatercolor,
+    "<span style='color: black'>OSM Hot</span>": OpenStreetMap_HOT,
+    "<span style='color: black'>ESRI Imagery</span>" : Esri_WorldImagery
+};
+
+var layerControl = L.control.layers(basemaps).addTo(mymap);
 
 
 // add the OpenStreetMap tile layer (i.e. the variable osm above) to the map
-osm.addTo(mymap);
+//osm.addTo(mymap);
 
 
