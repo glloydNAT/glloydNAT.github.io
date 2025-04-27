@@ -23,7 +23,7 @@ const regions =[
 
 // define our sites
 const sites = [
-    [],
+    ["01_Piro-all.zip"],
     [],
     [],
     ["04_West-Tiwa-all.zip"],
