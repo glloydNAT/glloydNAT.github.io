@@ -88,7 +88,7 @@ async function getSiteGeojson(zipfile, period) {
     try {
         // custom icon
         var iconOptions = {
-            iconUrl: "../myCss_styleFiles/DM_siteIcon.png",
+            iconUrl: "/DigitalMera/myCss_styleFiles/DM_siteIcon.png",
             iconSize: [25,25]
         }
         var customIcon = L.icon(iconOptions);
