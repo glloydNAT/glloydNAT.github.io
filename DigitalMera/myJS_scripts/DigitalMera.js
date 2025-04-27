@@ -35,11 +35,8 @@ const sites = [
 ]
 
 // default basemap
-var Stadia_StamenWatercolor = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.{ext}', {
-	minZoom: 1,
-	maxZoom: 16,
-	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	ext: 'jpg'
+var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
 //define the map
@@ -49,7 +46,7 @@ var mymap = L.map('mapId',{
         pseudoFullscreen: true, // if true, fullscreen to page width and height
         position: "topright"
     },
-    layers: Stadia_StamenWatercolor,
+    layers: Esri_WorldImagery,
     zoomControl: false
 
 
@@ -292,9 +289,9 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 });
 
 var basemaps = {
-    "<span style='color: black'>Stadia Watercolor</span>": Stadia_StamenWatercolor,
-    "<span style='color: black'>OSM Hot</span>": OpenStreetMap_HOT,
-    "<span style='color: black'>ESRI Imagery</span>" : Esri_WorldImagery
+    "<span style='color: black'>ESRI Imagery</span>" : Esri_WorldImagery,
+    "<span style='color: black'>OSM Hot</span>": OpenStreetMap_HOT
+    
 };
 
 var layerControl = L.control.layers(basemaps).addTo(mymap);
