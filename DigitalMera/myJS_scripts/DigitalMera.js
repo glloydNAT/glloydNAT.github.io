@@ -59,7 +59,7 @@ L.control.zoom({
 async function getShapeGeojson(zipfile, colorCode) {
     //get the shapefiles
     try {
-        const gj = await shp("data/regionShapes/" + zipfile);
+        const gj = await shp("/DigitalMera/data/regionShapes/" + zipfile);
         
         // define the regional shape (outline) style
         var thisStyle={
@@ -86,7 +86,7 @@ async function getSiteGeojson(zipfile, period) {
     try {
         // custom icon
         var iconOptions = {
-            iconUrl: "/myCss_styleFiles/DM_siteIcon.png",
+            iconUrl: "/DigitalMera/myCss_styleFiles/DM_siteIcon.png",
             iconSize: [25,25]
         }
         var customIcon = L.icon(iconOptions);
@@ -99,7 +99,7 @@ async function getSiteGeojson(zipfile, period) {
         }
 
         //get the shapefile
-        const gj = await shp("data/siteShapes/" + zipfile);
+        const gj = await shp("/DigitalMera/data/siteShapes/" + zipfile);
 
         // process per-period features in shapefile 
         gj["features"].forEach(feature => {
@@ -203,7 +203,7 @@ var legendItems = [
     {
         label: "Site",
         type: "image",
-        url: "/myCss_styleFiles/DM_siteIcon.png",
+        url: "/DigitalMera/myCss_styleFiles/DM_siteIcon.png",
     },
     {
         label: "Piro",
