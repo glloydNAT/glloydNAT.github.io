@@ -18,19 +18,19 @@ const regions =[
     ["6_Keres.zip","#f16913"], //8
     ["7_TanoTowa.zip","#d94801"], //9
     ["7a_TanoTowa.zip","#d94801"], //10
-    ["8_NorthTiwa.zip","#8c2d04"] //1
+    ["8_NorthTiwa.zip","#8c2d04"] //11
 ]
 
 // define our sites
 const sites = [
     ["01_Piro-all.zip"],
-    [],
-    [],
+    ["02_Tompiro-all.zip"],
+    ["03_Jumano-all.zip"],
     ["04_West-Tiwa-all.zip"],
-    [],
-    [],
-    [],
-    [],
+    ["05_EastTiwa-all.zip"],
+    ["06_Keres-all.zip"],
+    ["07_TanoTowa-all.zip"],
+    ["08_NorthTiwa-all.zip"],
     ["diagnosticSites-all.zip"]
 ]
 
@@ -48,8 +48,6 @@ var mymap = L.map('mapId',{
     },
     layers: Esri_WorldImagery,
     zoomControl: false
-
-
 }).setView([35.08539970090307, -106.62437969380134], 7.5);
 
 // custom zoom controls
@@ -88,7 +86,7 @@ async function getSiteGeojson(zipfile, period) {
     try {
         // custom icon
         var iconOptions = {
-            iconUrl: "/DigitalMera/myCss_styleFiles/DM_siteIcon.png",
+            iconUrl: "/myCss_styleFiles/DM_siteIcon.png",
             iconSize: [25,25]
         }
         var customIcon = L.icon(iconOptions);
@@ -99,8 +97,6 @@ async function getSiteGeojson(zipfile, period) {
             draggable: false,
             icon: customIcon
         }
-
-
 
         //get the shapefile
         const gj = await shp("data/siteShapes/" + zipfile);
@@ -163,17 +159,12 @@ for (let i=0;i < regions.length;i++){
     regionShapesArray[i] = getShapeGeojson(regions[i][0],regions[i][1]);
 }
 
-// make sure regionShapeArrays are all present.
+// make sure region shapes are all present in the array
 if (regionShapesArray.includes(1)) {
     console.log("error in regionShapes array");
 } else {
     console.log("all good in arrays");
 }
-
-
-
-
-
 
 // define our timeline slider
 // https://github.com/svitkin/leaflet-timeline-slider/
@@ -194,19 +185,25 @@ new L.Control.BootstrapDropdowns({
             afterClick: ()=>{
                 splashScreen.show();
             }
+        },
+        {
+            html: '<i class="fas fa-map-marked-alt"></i>Introduction',
+            title: "About",
+            afterClick: ()=>{
+                introChapter.show();
+            }
         }
     ],
 }).addTo(mymap);
 
 // define our legend
-
 var polygonSides = '7';
 
 var legendItems = [
     {
         label: "Site",
         type: "image",
-        url: "/DigitalMera/myCss_styleFiles/DM_siteIcon.png",
+        url: "/myCss_styleFiles/DM_siteIcon.png",
     },
     {
         label: "Piro",
@@ -272,12 +269,7 @@ L.control.Legend({
     column: 2
 }).addTo(mymap);
 
-// TODO: basemap changer
-
-// define our default basemap
-
-
-
+// basemap changer
 
 var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 	maxZoom: 19,
@@ -291,13 +283,8 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 var basemaps = {
     "<span style='color: black'>ESRI Imagery</span>" : Esri_WorldImagery,
     "<span style='color: black'>OSM Hot</span>": OpenStreetMap_HOT
-    
 };
 
 var layerControl = L.control.layers(basemaps).addTo(mymap);
-
-
-// add the OpenStreetMap tile layer (i.e. the variable osm above) to the map
-//osm.addTo(mymap);
 
 
