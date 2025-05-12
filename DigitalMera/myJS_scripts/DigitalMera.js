@@ -197,7 +197,7 @@ new L.Control.BootstrapDropdowns({
 }).addTo(mymap);
 
 // define our legend
-var polygonSides = '7';
+var polygonSides = '4';
 
 var legendItems = [
     {
@@ -210,56 +210,56 @@ var legendItems = [
         type: "polygon",
         sides: polygonSides,
         color: regions[0][1],
-        fill: true,
+        fill: false,
     },
     {
         label: "Tompiro",
         type: "polygon",
         sides: polygonSides,
         color: regions[2][1],
-        fill: true,
+        fill: false,
     },
     {
         label: "Jumano",
         type: "polygon",
         sides: polygonSides,
         color: regions[3][1],
-        fill: true,
+        fill: false,
     },
     {
         label: "West Tiwa",
         type: "polygon",
         sides: polygonSides,
         color: regions[5][1],
-        fill: true,
+        fill: false,
     },
     {
         label: "East Tiwa",
         type: "polygon",
         sides: polygonSides,
         color: regions[7][1],
-        fill: true,
+        fill: false,
     },
     {
         label: "Keres",
         type: "polygon",
         sides: polygonSides,
         color: regions[8][1],
-        fill: true,
+        fill: false,
     },
     {
         label: "Tano Towa",
         type: "polygon",
         sides: polygonSides,
         color: regions[9][1],
-        fill: true,
+        fill: false,
     },
     {
         label: "North Tiwa",
         type: "polygon",
         sides: polygonSides,
         color: regions[11][1],
-        fill: true,
+        fill: false,
     }
 ];
 
