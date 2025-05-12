@@ -7,18 +7,18 @@ const regionShapesArray = [], sitesShapesArray = [];
 
 // define our regions
 const regions =[
-    ["1_Piro.zip","#fff5eb"], //0
-    ["1a_Piro.zip","#fff5eb"], //1
-    ["2_Tompiro.zip","#fee6ce"], //2
-    ["3_Jumano.zip","#fdd0a2"], //3
-    ["3a_Jumano.zip","#fdd0a2"], //4
-    ["4_WestTiwa.zip","#fdae6b"], //5
-    ["4a_WestTiwa.zip","#fdae6b"], //6
-    ["5_EastTiwa.zip","#fd8d3c"], //7
-    ["6_Keres.zip","#f16913"], //8
-    ["7_TanoTowa.zip","#d94801"], //9
-    ["7a_TanoTowa.zip","#d94801"], //10
-    ["8_NorthTiwa.zip","#8c2d04"] //11
+    ["1_Piro.zip","#8c510a"], //0
+    ["1a_Piro.zip","#8c510a"], //1
+    ["2_Tompiro.zip","#bf812d"], //2
+    ["3_Jumano.zip","#dfc27d"], //3
+    ["3a_Jumano.zip","#dfc27d"], //4
+    ["4_WestTiwa.zip","#f6e8c3"], //5
+    ["4a_WestTiwa.zip","#f6e8c3"], //6
+    ["5_EastTiwa.zip","#c7eae5"], //7
+    ["6_Keres.zip","#80cdc1"], //8
+    ["7_TanoTowa.zip","#35978f"], //9
+    ["7a_TanoTowa.zip","#35978f"], //10
+    ["8_NorthTiwa.zip","#01665e"] //11
 ]
 
 // define our sites
