@@ -169,7 +169,7 @@ if (regionShapesArray.includes(1)) {
 // define our timeline slider
 // https://github.com/svitkin/leaflet-timeline-slider/
 L.control.timelineSlider({
-    timelineItems: ["Period 1", "Period 2", "Period 3", "Period 4", "Period 5"],
+    timelineItems: ["Period 1\n(1350-1450)", "Period 2\n(1450-1490)", "Period 3\n(1490-1515)", "Period 4\n(1515-1650)", "Period 5\n(1650-1700)"],
     initializeChange: true,
     changeMap: changeMapFunction
 }).addTo(mymap);
